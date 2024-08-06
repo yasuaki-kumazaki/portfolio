@@ -9,13 +9,13 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 @layer utilities {
@@ -28,4 +28,11 @@ body {
   font-family: "Helvetica Neue";
   src: url("../../public/helveticaneue.woff2") format("woff2"),
     url("../../public/helveticaneue.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Minion Pro";
+  src: url("/MinionPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }

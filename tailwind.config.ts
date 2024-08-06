@@ -15,6 +15,7 @@ const config: Config = {
       },
       fontFamily: {
         helvetica_neue: "Helvetica Neue",
+        minionPro: "Minion Pro",
       },
       width: {
         '2/10': '20%',
@@ -25,5 +26,6 @@ const config: Config = {
     },
   },
   plugins: [],
+  darkMode: 'class',
 };
 export default config;
