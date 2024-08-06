@@ -26,8 +26,8 @@ export default function Page() {
           <div className="flex flex-col justify-between items-start gap-4 max-w-screen-xl ">
             <h2 className="text-3xl lg:text-5xl">Contact me!</h2>
             <h3 className="text-2xl lg:text-2xl">
-              Have any questions? Fill out the form and I'll get you a response
-              soon!
+              Have any questions? Fill out the form and I&apos;ll get you a
+              response soon!
             </h3>
             <p className="font-minionPro">
               Feel free to ask / inquire about anything.
