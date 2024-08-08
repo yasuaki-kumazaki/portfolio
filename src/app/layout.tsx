@@ -5,6 +5,11 @@ import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import { ThemeProviders } from "@/app/theme-provider";
 
+// for declaring environment variables in the backend(server) folder
+// to read .env variables in short
+const dotenv = require("dotenv");
+dotenv.config();
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

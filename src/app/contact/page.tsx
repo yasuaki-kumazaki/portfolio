@@ -1,9 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
+import { useFormState } from "react-dom";
 
 export type FormData = {
   firstName: string;
@@ -13,11 +14,30 @@ export type FormData = {
 };
 
 export default function Page() {
-  const { register, handleSubmit } = useForm<FormData>();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState,
+    formState: { errors, isSubmitSuccessful },
+  } = useForm<FormData>({
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      message: "",
+    },
+  });
 
   function onSubmit(data: FormData) {
     sendEmail(data);
   }
+
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset();
+    }
+  }, [isSubmitSuccessful, reset]);
 
   return (
     <>
@@ -66,8 +86,15 @@ export default function Page() {
                       type="text"
                       autoComplete="given-name"
                       className="w-full h-10 hover:bg-gray-200 dark:hover:bg-gray-800 focus:outline-orange-400"
-                      {...register("firstName", { required: true })}
+                      {...register("firstName", {
+                        required: "First Name is required.",
+                      })}
                     />
+                    {errors.firstName && (
+                      <p className="errorMsg text-red-500 text-sm">
+                        {errors.firstName.message}
+                      </p>
+                    )}
                   </div>
                   <div>
                     <label htmlFor="lastName">Last Name</label>
@@ -76,8 +103,15 @@ export default function Page() {
                       type="text"
                       autoComplete="family-name"
                       className="w-full h-10 hover:bg-gray-200 dark:hover:bg-gray-800 focus:outline-orange-400 "
-                      {...register("lastName", { required: true })}
+                      {...register("lastName", {
+                        required: "Last Name is required.",
+                      })}
                     />
+                    {errors.lastName && (
+                      <p className="errorMsg text-red-500 text-sm">
+                        {errors.lastName.message}
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
@@ -88,8 +122,13 @@ export default function Page() {
                   type="email"
                   autoComplete="on"
                   className="w-full h-10 hover:bg-gray-200 dark:hover:bg-gray-800 focus:outline-orange-400 text-base lg:text-lg"
-                  {...register("email", { required: true })}
+                  {...register("email", { required: "Email is required." })}
                 />
+                {errors.email && (
+                  <p className="errorMsg text-red-500 text-sm">
+                    {errors.email.message}
+                  </p>
+                )}
               </div>
               <div>
                 <label htmlFor="message">Message</label>
@@ -97,8 +136,13 @@ export default function Page() {
                   id="message"
                   rows={4}
                   className="w-full h-32 hover:bg-gray-200 dark:hover:bg-gray-800 focus:outline-orange-400 text-base lg:text-lg"
-                  {...register("message", { required: true })}
+                  {...register("message", { required: "message is empty." })}
                 />
+                {errors.message && (
+                  <p className="errorMsg text-red-500 text-sm">
+                    {errors.message.message}
+                  </p>
+                )}
               </div>
               <div>
                 <button className="bg-white dark:bg-black hover:bg-gray-200 dark:hover:bg-gray-800 py-2 px-4 rounded-md focus:outline-orange-400">
