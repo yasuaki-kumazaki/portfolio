@@ -31,12 +31,12 @@ export async function POST(request: NextRequest) {
   };
 
   const sendMailPromise = () =>
-    new Promise<string>((resolve, reject) => {
-      transport.sendMail(mailOptions, function (err) {
+    new Promise((resolve, reject) => {
+      transport.sendMail(mailOptions, (err, info) => {
         if (!err) {
-          resolve("Email sent");
+          resolve(info);
         } else {
-          reject(err.message);
+          reject(err);
         }
       });
     });
