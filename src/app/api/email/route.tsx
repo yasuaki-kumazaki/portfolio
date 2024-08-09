@@ -6,7 +6,13 @@ export async function POST(request: NextRequest) {
   const { email, firstName, lastName, message } = await request.json();
 
   const transport = nodemailer.createTransport({
-    service: "Gmail",
+    service: "gmail",
+    auth: {
+      user: process.env.MY_EMAIL,
+      pass: process.env.MY_PASSWORD,
+    },
+    debug: true,
+    logger: true,
     // host: "smtp.gmail.com",
     // tls: {
     //   ciphers: "SSLv3",
@@ -19,10 +25,6 @@ export async function POST(request: NextRequest) {
       Or you can go use these well known services and their settings at
       https://github.com/nodemailer/nodemailer/blob/master/lib/well-known/services.json
   */
-    auth: {
-      user: process.env.MY_EMAIL,
-      pass: process.env.MY_PASSWORD,
-    },
   });
 
   const mailOptions: Mail.Options = {
