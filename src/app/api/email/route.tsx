@@ -6,13 +6,13 @@ export async function POST(request: NextRequest) {
   const { email, firstName, lastName, message } = await request.json();
 
   const transport = nodemailer.createTransport({
-    service: "gmail",
-    host: "smtp.gmail.com",
-    tls: {
-      ciphers: "SSLv3",
-    },
-    port: 465,
-    secure: true,
+    service: "Gmail",
+    // host: "smtp.gmail.com",
+    // tls: {
+    //   ciphers: "SSLv3",
+    // },
+    // port: 465,
+    // secure: true,
     /* 
       setting service as 'gmail' is same as providing these setings:
       If you want to use a different email provider other than gmail, you need to provide these manually.
@@ -33,8 +33,8 @@ export async function POST(request: NextRequest) {
     text: message,
   };
 
-  const sendMailPromise = () =>
-    new Promise((resolve, reject) => {
+  const sendMailPromise = () => {
+    return new Promise((resolve, reject) => {
       transport.verify((error, success) => {
         if (error) {
           console.log(`Connection error: ${error}`);
@@ -51,6 +51,7 @@ export async function POST(request: NextRequest) {
         }
       });
     });
+  };
 
   try {
     await sendMailPromise();
