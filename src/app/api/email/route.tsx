@@ -35,6 +35,14 @@ export async function POST(request: NextRequest) {
 
   const sendMailPromise = () =>
     new Promise((resolve, reject) => {
+      transport.verify((error, success) => {
+        if (error) {
+          console.log(`Connection error: ${error}`);
+        } else {
+          console.log("Server is ready to take our messages.");
+        }
+      });
+
       transport.sendMail(mailOptions, (err, info) => {
         if (!err) {
           resolve(info);
@@ -45,8 +53,7 @@ export async function POST(request: NextRequest) {
     });
 
   try {
-    await transport.sendMail(mailOptions);
-    // await sendMailPromise();
+    await sendMailPromise();
     return NextResponse.json({ message: "Email sent" });
   } catch (err) {
     return NextResponse.json({ error: err }, { status: 500 });
