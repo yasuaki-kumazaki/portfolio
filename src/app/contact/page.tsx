@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
-import { useFormState } from "react-dom";
 
 export type FormData = {
   firstName: string;
