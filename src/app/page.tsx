@@ -69,16 +69,16 @@ export default function Home() {
             <p className="text-xl lg:text-2xl font-minionPro">
               I am Yasuaki Kumazaki from Japan. Currently, I live in Hamburg,
               Germany, where I am pursuing a B.S. in Information Engineering at
-              Hamburg University of Applied Sciences.
+              Hamburg University of Applied Sciences (expected graduation: March 2026).
             </p>
             <p className="text-xl lg:text-2xl font-minionPro">
-              I am seeking a software engineering internship to apply the
-              knowledge gained from my coursework and self-study while further
-              honing my skills in software engineering.
+              I am now seeking a <span className="font-semibold">thesis student position</span> 
+              where I can combine my academic research with practical contributions 
+              in full-stack software engineering.
             </p>
             <p className="text-xl lg:text-2xl font-minionPro">
-              I have three years of experience developing software systems and
-              applications at a tech consulting firm.
+              Recently I completed a full-stack development internship at <span className="font-semibold">Rockect Factory Augsburg</span>, 
+              and previously I worked for three years as an Application Development Senior Analyst at Accenture Japan.
             </p>
           </div>
         </div>
@@ -87,6 +87,23 @@ export default function Home() {
           <div>
             <h1 className="text-2xl lg:text-4xl">Experience</h1>
           </div>
+
+          <div className="text-xl lg:text-2xl">
+            <h2 className="pb-2 font-minionPro">
+              Full-Stack Software Development Engineering Intern @ Rocket Factory Augsburg (Mar - Sep 2025)
+            </h2>
+            <ul className="px-4 font-minionPro">
+              <li>
+                - Developed and maintained internal tools to manage hardware data and workflows
+              </li>
+              <li>
+                - Extended backend APIs using FastAPI, SQLAlchemy, and Alembic
+              </li>
+              <li>- Enhanced UI with React.js, Mantine UI, and TanStack</li>
+              <li>- Contributed to CI/CD pipelines with GitLab</li>
+            </ul>
+          </div>
+
           <div className="text-xl lg:text-2xl">
             <h2 className="pb-2 font-minionPro">
               Application Development Senior Analyst @ Accenture Japan Ltd (2017
@@ -94,13 +111,12 @@ export default function Home() {
             </h2>
             <ul className="px-4 font-minionPro">
               <li>
-                - System Development / System Migration (SAP Basis, Java, MSDB){" "}
+                - Developed applications on SAP Cloud Platform using JavaScript, Java, and ABAP
               </li>
               <li>
-                - Software Development (SAP Fiori, JavaScript, SAP Cloud
-                Platform)
+                - Configured environments for SAP S/4 HANA system migration
               </li>
-              <li>- Project Management (Microsoft Office)</li>
+              <li>- Collaborated with cross-functional teams on enterprise projects</li>
             </ul>
           </div>
         </div>
