@@ -2,11 +2,37 @@ import Image from "next/image";
 import pic from "../../public/pic.png";
 import { FaCss3Alt, FaHtml5, FaJava, FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiC, SiJavascript, SiTypescript } from "react-icons/si";
+import { SiC, SiDocker, SiFastapi, SiGitlab, SiJavascript, SiPostgresql, SiTypescript } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
 
 const SkillIcons = () => {
   return (
     <>
+      {/* fastapi */}
+      <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
+        <SiFastapi className="text-4xl" />
+        <h2 className="text-xs text-center">FastAPI</h2>
+      </div>
+      {/* postgresql */}
+      <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
+        <SiPostgresql className="text-4xl" />
+        <h2 className="text-xs text-center">PostgreSQL</h2>
+      </div>
+      {/* docker */}
+      <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
+        <SiDocker className="text-4xl" />
+        <h2 className="text-xs text-center">Docker</h2>
+      </div>
+      {/* gitlab */}
+      <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
+        <SiGitlab className="text-4xl" />
+        <h2 className="text-xs text-center">GitLab CI/CD</h2>
+      </div>
+      {/* nextjs */}
+      <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
+        <TbBrandNextjs className="text-4xl" />
+        <h2 className="text-xs text-center">Next.js</h2>
+      </div>
       {/* html */}
       <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
         <FaHtml5 className="text-4xl" />
@@ -69,16 +95,16 @@ export default function Home() {
             <p className="text-xl lg:text-2xl font-minionPro">
               I am Yasuaki Kumazaki from Japan. Currently, I live in Hamburg,
               Germany, where I am pursuing a B.S. in Information Engineering at
-              Hamburg University of Applied Sciences.
+              Hamburg University of Applied Sciences (expected graduation: March 2026).
             </p>
             <p className="text-xl lg:text-2xl font-minionPro">
-              I am seeking a software engineering internship to apply the
-              knowledge gained from my coursework and self-study while further
-              honing my skills in software engineering.
+              I am now seeking a <span className="font-semibold">thesis student position</span> 
+              where I can combine my academic research with practical contributions 
+              in full-stack software engineering.
             </p>
             <p className="text-xl lg:text-2xl font-minionPro">
-              I have three years of experience developing software systems and
-              applications at a tech consulting firm.
+              Recently I completed a full-stack development internship at <span className="font-semibold">Rockect Factory Augsburg</span>, 
+              and previously I worked for three years as an Application Development Senior Analyst at Accenture Japan.
             </p>
           </div>
         </div>
@@ -87,6 +113,23 @@ export default function Home() {
           <div>
             <h1 className="text-2xl lg:text-4xl">Experience</h1>
           </div>
+
+          <div className="text-xl lg:text-2xl">
+            <h2 className="pb-2 font-minionPro">
+              Full-Stack Software Development Engineering Intern @ Rocket Factory Augsburg (Mar - Sep 2025)
+            </h2>
+            <ul className="px-4 font-minionPro">
+              <li>
+                - Developed and maintained internal tools to manage hardware data and workflows
+              </li>
+              <li>
+                - Extended backend APIs using FastAPI, SQLAlchemy, and Alembic
+              </li>
+              <li>- Enhanced UI with React.js, Mantine UI, and TanStack</li>
+              <li>- Contributed to CI/CD pipelines with GitLab</li>
+            </ul>
+          </div>
+
           <div className="text-xl lg:text-2xl">
             <h2 className="pb-2 font-minionPro">
               Application Development Senior Analyst @ Accenture Japan Ltd (2017
@@ -94,13 +137,12 @@ export default function Home() {
             </h2>
             <ul className="px-4 font-minionPro">
               <li>
-                - System Development / System Migration (SAP Basis, Java, MSDB){" "}
+                - Developed applications on SAP Cloud Platform using JavaScript, Java, and ABAP
               </li>
               <li>
-                - Software Development (SAP Fiori, JavaScript, SAP Cloud
-                Platform)
+                - Configured environments for SAP S/4 HANA system migration
               </li>
-              <li>- Project Management (Microsoft Office)</li>
+              <li>- Collaborated with cross-functional teams on enterprise projects</li>
             </ul>
           </div>
         </div>
