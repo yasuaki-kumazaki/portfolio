@@ -2,11 +2,37 @@ import Image from "next/image";
 import pic from "../../public/pic.png";
 import { FaCss3Alt, FaHtml5, FaJava, FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiC, SiJavascript, SiTypescript } from "react-icons/si";
+import { SiC, SiDocker, SiFastapi, SiGitlab, SiJavascript, SiPostgresql, SiTypescript } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
 
 const SkillIcons = () => {
   return (
     <>
+      {/* fastapi */}
+      <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
+        <SiFastapi className="text-4xl" />
+        <h2 className="text-xs text-center">FastAPI</h2>
+      </div>
+      {/* postgresql */}
+      <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
+        <SiPostgresql className="text-4xl" />
+        <h2 className="text-xs text-center">PostgreSQL</h2>
+      </div>
+      {/* docker */}
+      <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
+        <SiDocker className="text-4xl" />
+        <h2 className="text-xs text-center">Docker</h2>
+      </div>
+      {/* gitlab */}
+      <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
+        <SiGitlab className="text-4xl" />
+        <h2 className="text-xs text-center">GitLab CI/CD</h2>
+      </div>
+      {/* nextjs */}
+      <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
+        <TbBrandNextjs className="text-4xl" />
+        <h2 className="text-xs text-center">Next.js</h2>
+      </div>
       {/* html */}
       <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
         <FaHtml5 className="text-4xl" />
