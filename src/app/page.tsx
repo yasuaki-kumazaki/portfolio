@@ -7,7 +7,9 @@ import {
   SiFastapi,
   SiGitlab,
   SiJavascript,
+  SiMantine,
   SiPostgresql,
+  SiSqlalchemy,
   SiTypescript,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
@@ -57,6 +59,10 @@ const SkillIcons = () => {
         <h2 className="text-xs text-center">Next.js</h2>
       </div>
       <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
+        <SiMantine className="text-4xl" />
+        <h2 className="text-xs text-center">Mantine</h2>
+      </div>
+      <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
         <Image src={tanstackLogo} alt="TanStack Logo" width={40} height={40} />
         <h2 className="text-xs text-center">TanStack</h2>
       </div>
@@ -65,6 +71,10 @@ const SkillIcons = () => {
       <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
         <SiFastapi className="text-4xl" />
         <h2 className="text-xs text-center">FastAPI</h2>
+      </div>
+      <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
+        <SiSqlalchemy className="text-4xl" />
+        <h2 className="text-xs text-center">SQLAlchemy</h2>
       </div>
       <div className="flex flex-col items-center justify-center rounded-lg bg-stone-300 dark:bg-stone-800 gap-2 w-28 h-28">
         <SiPostgresql className="text-4xl" />
@@ -138,7 +148,7 @@ export default function Home() {
                 <li>
                   - Extended backend APIs using FastAPI, SQLAlchemy, and Alembic
                 </li>
-                <li>- Enhanced UI with React.js, Mantine UI, and TanStack</li>
+                <li>- Enhanced UI with React.js, Mantine, and TanStack</li>
                 <li>- Contributed to CI/CD pipelines with GitLab</li>
               </ul>
             </div>
