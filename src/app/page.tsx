@@ -123,7 +123,7 @@ export default function Home() {
             </p>
             <p className="text-xl lg:text-2xl font-minionPro">
               Recently I completed a full-stack development internship at{" "}
-              <span className="font-semibold">Rockect Factory Augsburg</span>,
+              <span className="font-semibold">Rocket Factory Augsburg</span>,
               and previously I worked for three years as an Application
               Development Senior Analyst at Accenture Japan.
             </p>
